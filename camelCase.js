@@ -12,14 +12,6 @@ import toString from './toString.js'
  * @see lowerCase, kebabCase, snakeCase, startCase, upperCase, upperFirst
  * @example
  *
- * camelCase('Foo Bar')
- * // => 'fooBar'
- *
- * camelCase('--foo-bar--')
- * // => 'fooBar'
- *
- * camelCase('__FOO_BAR__')
- * // => 'fooBar'
  */
 const camelCase = (string) => (
   words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) => {
